@@ -17,7 +17,7 @@ void run() {
 	TIME(Search::jump);
 	TIME(Search::jump_reverse);
 	TIME(Search::jump_recursive);
-	TIME(Search::jump_recursive_reverse) */;
+	TIME(Search::jump_recursive_reverse) ;*/
 	
 	config::seperate();
 	TIME(Search::linear);
