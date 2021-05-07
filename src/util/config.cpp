@@ -9,7 +9,7 @@
 
 namespace config {
 	int arr[size];
-	int target;
+	int targets[targetSize];
 	
 	void generate(bool print) {
 		for(int i = 0; i < size; ++i)
@@ -43,7 +43,8 @@ namespace config {
 		static std::mt19937 mt(rd());
 		std::uniform_int_distribution<std::mt19937::result_type> rng(0, size-1);
 
-		target = rng(mt);
+		for(int &target : targets)
+			target = rng(mt);
 	}
 
 	/* void average(int vals[]) {

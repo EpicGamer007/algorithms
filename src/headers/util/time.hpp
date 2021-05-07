@@ -6,6 +6,6 @@
 
 #define TIME(x) time(x, #x)
 
-int time(std::function<int(int)> searchFunction, const std::string &name);
+void time(std::function<int(int)> searchFunction, const std::string &name);
 
 #endif
