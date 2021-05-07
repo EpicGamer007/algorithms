@@ -1,0 +1,6 @@
+run="""
+clear
+cd src
+cpps=$(find $directory -type f -name "*.cpp")
+g++-8 $cpps -std=c++17 -Wall -Wpedantic -Wextra -I headers -o ../bin/algorithms.out && cd .. && ./bin/algorithms.out
+"""
