@@ -20,7 +20,7 @@ int Search::m_linear_recursive_reverse(int index, int target) {
 }
 
 int Search::linear(int target) {
-	for(int i = 0; i < config::size; i++) {
+	for(int i = 0; i < config::size; ++i) {
 		if(config::arr[i] == target) {
 			return i;
 		}
@@ -29,7 +29,7 @@ int Search::linear(int target) {
 }
 
 int Search::linear_reverse(int target) {
-	for(int i = config::size - 1; i > -1; i--) {
+	for(int i = config::size - 1; i > -1; --i) {
 		if(config::arr[i] == target) {
 			return i;
 		}

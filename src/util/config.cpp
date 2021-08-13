@@ -18,7 +18,7 @@ namespace config {
 		if(!print) return;
 
 		std::cout << '[';
-		for(int i = 0; i < size - 1; i++)
+		for(int i = 0; i < size - 1; ++i)
 			std::cout << arr[i] << ", ";
 		std::cout << arr[size - 1] << ']';
 
@@ -31,7 +31,7 @@ namespace config {
     	ioctl(STDOUT_FILENO, TIOCGWINSZ, &w);
 
 		std::cout << colors::PURPLE_BRIGHT;
-		for(int i = 0; i < w.ws_col; i++) {
+		for(int i = 0; i < w.ws_col; ++i) {
 			std::cout << "-";
 		}
 		std::cout << colors::RESET << "\n";
@@ -50,7 +50,7 @@ namespace config {
 	/* void average(int vals[]) {
 		const int arrSize = sizeof(vals) / sizeof(vals[0]);
 		int total = 0;
-		for(int i = 0; i < arrSize; i++) {
+		for(int i = 0; i < arrSize; ++i) {
 			total += vals[i];
 		}
 		int average = total/arrSize;
